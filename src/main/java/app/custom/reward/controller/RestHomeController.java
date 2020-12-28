@@ -2,7 +2,6 @@ package app.custom.reward.controller;
 
 import app.custom.reward.dto.UserRepository;
 import app.custom.reward.entity.User;
-import app.custom.reward.service.LogOutputService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,8 +24,4 @@ public class RestHomeController {
         return (List<User>) repository.findAll();
     }
 
-    @GetMapping("/getUserByName/{name}")
-    public User findUserByName(@PathVariable String name) {
-        return repository.findByName(name);
-    }
 }
